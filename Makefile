@@ -1,10 +1,10 @@
 .PHONY: clean
 
-multiply_add: multiply_add.c math_funcs.c
-	$(CC) multiply_add.c math_funcs.c -o multiply_add
+root_finder: root_finder.c root_finding_funcs.c
+	$(CC) root_finder.c root_finding_funcs.c -o root_finder
 
-tests: test_math_funcs.c math_funcs.c
-	$(CC) test_math_funcs.c math_funcs.c -o tests
+tests: test_root_finding_funcs.c root_finding_funcs.c
+	$(CC) test_root_finding_funcs.c root_finding_funcs.c -o tests
 
 clean:
-	$(RM) multiply_add tests
+	$(RM) root_finder tests
