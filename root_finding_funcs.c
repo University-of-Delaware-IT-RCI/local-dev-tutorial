@@ -15,6 +15,7 @@ double quadratic_derivative(double x)
 }
 
 // A quintic function with one real root that can't be expressed in closed form
+// https://en.wikipedia.org/wiki/Galois_theory#A_non-solvable_quintic_example
 double quintic_function(double x)
 {
     // TODO: Implement f(x) = x^5 - x - 1
