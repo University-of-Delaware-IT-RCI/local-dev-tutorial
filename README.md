@@ -59,3 +59,11 @@ vpkg_devrequire gcc/14.2
 ```
 
 Once you have done so, compilation works the same as on your local machine.
+
+## Running on DARWIN
+
+The job script `root_finder_job.qs` submits a job array with three array tasks that start from different initial guesses. To submit this job, run:
+
+```
+sbatch root_finder_job.qs
+```
