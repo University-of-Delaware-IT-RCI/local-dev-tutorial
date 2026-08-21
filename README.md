@@ -26,6 +26,8 @@ Git should be available by default. You can install a C compiler and GNU Make by
 sudo apt install build-essential
 ```
 
+(The `build-essential` package bundles together several useful packages for C and C++ code development.)
+
 ## macOS
 
 All dependencies can be installed by running:
@@ -33,6 +35,8 @@ All dependencies can be installed by running:
 ```zsh
 xcode-select --install
 ```
+
+(This installs the [Xcode command-line tools](https://developer.apple.com/documentation/xcode/installing-the-command-line-tools).)
 
 ## Compiling on your local machine
 
