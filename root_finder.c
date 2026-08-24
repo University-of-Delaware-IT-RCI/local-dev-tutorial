@@ -6,8 +6,8 @@
 
 int main(int argc, char *argv[])
 {
-    // Initial guess for the root location. Defaults to zero.
-    double guess = 0;
+    // Initial guess for the root location (defaults to 1)
+    double guess = 1;
 
     // Overwrite default initial guess if one is provided
     if (argc == 2)
