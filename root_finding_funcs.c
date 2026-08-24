@@ -49,7 +49,8 @@ double find_root(double (*function)(double), double (*derivative)(double),
 
     for (int i = 1; i < iterations; i++)
     {
-        x_root = x_root - function(x_root)/derivative(x_root);
+        x_root = x_root - function(x_root) / derivative(x_root);
+
         if (verbose) printf("Step %i: %.17f\n", i, x_root);
     }
 
