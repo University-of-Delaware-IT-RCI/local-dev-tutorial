@@ -1,4 +1,4 @@
-.PHONY: clean
+.PHONY: run_tests clean
 
 # Link to C math library
 LDLIBS = -lm
