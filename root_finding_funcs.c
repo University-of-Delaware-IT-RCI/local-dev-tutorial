@@ -19,13 +19,13 @@ double quadratic_derivative(double x)
 double quintic_function(double x)
 {
     // TODO: Implement f(x) = x^5 - x - 1
-    return pow(x, 5) - x - 1;
+    return NAN;
 }
 
 double quintic_derivative(double x)
 {
     // TODO: Implement f'(x) = 5x^4 - 1
-    return 5 * pow(x, 4) - 1;
+    return NAN;
 }
 
 // Compute a root of a single-variable function using Newton's method.
