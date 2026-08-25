@@ -34,10 +34,12 @@ double quintic_derivative(double x)
 //   - A function pointer to the function whose root is to be computed.
 //   - A function pointer to that function's derivative.
 //   - An initial guess for the location of the root.
-//   - An integer flag which determines whether or not the approximation
-//     to the location of the root is printed at each iteration.
+//   - An integer flag which determines whether or not the approximate
+//     location of the root is printed at each iteration.
 //
-// The output is the location of the root.
+// The output is the approximate location of the root at the final Newton
+// iteration. Note that this may not be a good approximation if Newton's
+// method has not converged.
 double find_root(double (*function)(double), double (*derivative)(double),
                  double initial_guess, int verbose)
 {
