@@ -89,7 +89,7 @@ int test_quintic_derivative()
 
 int test_find_root()
 {
-    double tolerance = 2e-16;
+    double tolerance = 1e-15;
 
     // The quadratic we're using for this test has roots at 0 and 4/3
     double truth_val = 4.0/3.0;

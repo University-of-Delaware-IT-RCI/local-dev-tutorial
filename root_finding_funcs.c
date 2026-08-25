@@ -19,13 +19,13 @@ double quadratic_derivative(double x)
 double quintic_function(double x)
 {
     // TODO: Implement f(x) = x^5 - x - 1
-    return NAN;
+    return pow(x, 5) - x - 1;
 }
 
 double quintic_derivative(double x)
 {
     // TODO: Implement f'(x) = 5x^4 - 1
-    return NAN;
+    return 5 * pow(x, 4) - 1;
 }
 
 // Compute a root of a single-variable function using Newton's method.
@@ -43,18 +43,31 @@ double find_root(double (*function)(double), double (*derivative)(double),
 {
     double x_root = initial_guess;
 
-    int iterations = 10;
+    double residual = fabs(function(x_root));
 
     if (verbose) printf("\nStep 0: %.17f\n", x_root);
+    
+    int iter = 1;
+    int max_iter = 10;
+    double tol = 1e-15;
 
-    for (int i = 1; i < iterations; i++)
+    while (residual > tol && iter < max_iter)
     {
         x_root = x_root - function(x_root) / derivative(x_root);
 
-        if (verbose) printf("Step %i: %.17f\n", i, x_root);
+        residual = fabs(function(x_root));
+
+        if (verbose) printf("Step %i: %.17f\n", iter, x_root);
+
+        iter++;
     }
 
     if (verbose) printf("\n");
+
+    if (verbose && residual > tol)
+    {
+        printf("Warning: root not found!\n\n");
+    }
 
     return x_root;
 }
