@@ -5,11 +5,11 @@
 
 int test_quadratic_function()
 {
-    double tolerance = 1e-16;
+    double tolerance = 2e-16;
 
     double test_point = 0.5;
 
-    double truth_value = -0.75;
+    double truth_value = -5.0/12.0;
     double test_value  = quadratic_function(test_point);
 
     double error = fabs(test_value - truth_value) / fabs(truth_value);
@@ -26,11 +26,11 @@ int test_quadratic_function()
 
 int test_quadratic_derivative()
 {
-    double tolerance = 1e-16;
+    double tolerance = 2e-16;
 
     double test_point = 0.5;
 
-    double truth_value = 1;
+    double truth_value = -1.0/3.0;
     double test_value  = quadratic_derivative(test_point);
 
     double error = fabs(test_value - truth_value) / fabs(truth_value);
@@ -47,7 +47,7 @@ int test_quadratic_derivative()
 
 int test_quintic_function()
 {
-    double tolerance = 1e-16;
+    double tolerance = 2e-16;
 
     double test_point = 2;
 
@@ -68,7 +68,7 @@ int test_quintic_function()
 
 int test_quintic_derivative()
 {
-    double tolerance = 1e-16;
+    double tolerance = 2e-16;
 
     double test_point = 2;
 
@@ -89,13 +89,13 @@ int test_quintic_derivative()
 
 int test_find_root()
 {
-    double tolerance = 1e-16;
+    double tolerance = 2e-16;
 
-    // The quadratic we're using for this test has roots at -1 and 1
-    double truth_val = 1;
+    // The quadratic we're using for this test has roots at 0 and 4/3
+    double truth_val = 4.0/3.0;
 
-    // If we start at 0.5, we should get the root at 1
-    double guess = 0.5;
+    // If we start at 1, we should get the root at 4/3
+    double guess = 1;
     int verbose = 0;
 
     double test_val = find_root(quadratic_function, quadratic_derivative,

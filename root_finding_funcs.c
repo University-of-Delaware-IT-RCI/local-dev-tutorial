@@ -3,15 +3,15 @@
 
 #include "root_finding_funcs.h"
 
-// A quadratic function with roots at x = 1 and x = -1
+// A quadratic function with roots at x = 0 and x = 4/3
 double quadratic_function(double x)
 {
-    return (x + 1) * (x - 1);
+    return x * (x - 4.0/3.0);
 }
 
 double quadratic_derivative(double x)
 {
-    return 2 * x;
+    return 2 * x - 4.0/3.0;
 }
 
 // A quintic function with one real root that can't be expressed in closed form
