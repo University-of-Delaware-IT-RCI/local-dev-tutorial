@@ -28,7 +28,7 @@ sudo apt install build-essential
 
 (The `build-essential` package bundles together several useful packages for C and C++ code development.)
 
-## macOS
+### macOS
 
 All dependencies can be installed by running:
 
